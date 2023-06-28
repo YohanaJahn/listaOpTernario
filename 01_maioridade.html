@@ -4,11 +4,9 @@
     //Leia a idade de uma pessoa e informe se ela já chegou à maioridade.Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
 
     //Entrada
-
-
+    const idade = Number(prompt("Informe sua Idade").trim());
     //Processamento
-
-
+    let mensagemFinal = (idade >= 18)? "Você já chegou a maior idade!" : `Você não atingiu a maioridade. Faltam ${(18 - idade)} anos.`;
     //Saída
-
+    alert(mensagemFinal);
 </script>
