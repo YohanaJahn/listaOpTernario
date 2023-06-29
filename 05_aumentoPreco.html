@@ -5,14 +5,13 @@
         //- até 280(inclusive): aumento de 20 %
         //- até 700(inclusive): aumento de 15 %
         //- até 1500(inclusive): aumento de 10 %
-        //- acima de 1500: aumento de 5 %
+        //-  ima de 1500: aumento de 5 %
     
     //Entrada
-
-
+    const precoProduto = parseFloat(prompt("Insira o valor do produto").trim().replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = (precoProduto <= 280) ? `O produto terá um novo valor de R$ ${( precoProduto + (precoProduto * 0.20)).toFixed(2).replace(".", ",")}.` : (precoProduto > 280 && precoProduto <= 700) ? `O produto terá um novo valor de R$ ${(precoProduto + (precoProduto * 0.15)).toFixed(2).replace(".", ",")}.` : (precoProduto > 700 && precoProduto <= 1500) ? `O produto terá um novo valor de R$ ${(precoProduto + (precoProduto * 0.1)).toFixed(2).replace(".", ",")}.` :
+    `O novo valor será de R$ ${(precoProduto +(precoProduto * 0.05)).toFixed(2).replace(".", ",")}.`
     //Saída
-
+    alert(mensagemFinal)
 </script>

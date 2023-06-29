@@ -6,12 +6,14 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    const precoGasolina = Number(prompt("Insira o preço da gasolina.").trim().replace(",", "."));
+    const gasolinaGasta = Number(prompt("Insira a gasolina gasta para ir até o trabalho.").trim().replace(",", "."));
+    const transportePublico = Number(prompt("Insira o valor do transporte público.").trim().replace(",", "."));
     //Processamento
+    const valorSozinho = (precoGasolina * gasolinaGasta) * 2;
+    const transporte = transportePublico * 2;
 
-    
+    let mensagemFinal = (valorSozinho < transporte)? `Será mais barato ir sem transporte público, e irá custar ${valorSozinho.toFixed(2).replace(".", ",")} ida e volta.` : (transporte < valorSozinho)? `Será mais barato ir com transporte público, e irá custar ${transporte.toFixed(2).replace(".", ",")} ida e volta`: `Insira valor validos`;
     //Saída
-
-    
+    alert(mensagemFinal);
 </script>

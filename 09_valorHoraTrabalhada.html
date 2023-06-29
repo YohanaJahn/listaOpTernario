@@ -7,12 +7,15 @@
     // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
-    //Entrada
-
+    const horaSemanal = parseInt(prompt("Informe a quantidade de hora trabalhadas semanalmente:").trim());
+    const salario = parseFloat(prompt("Informe o seu salário:").trim().replace(",", "."));
 
     //Processamento
+    const salario60 = (salario * 0.20) + salario;
+    const salarioUltrapassar = salario + (salario * 0.30); 
 
+    let mensagemFinal = (horaSemanal <= 45) ? `Não haverá adicional` : (horaSemanal <= 60) ? `Houve um adicional de 20% e o total é de R$ ${salario60.toFixed(2).replace(".", ",")}.` : `Houve um adicional de 30% e o total é de R$ ${salarioUltrapassar.toFixed(2).replace(".", ",")}`;
     
     //Saída
-
+    alert(mensagemFinal)
 </script>

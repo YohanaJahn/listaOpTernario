@@ -10,11 +10,9 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
-
+    const nota = Number(prompt("Insira sua Nota.").trim().replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = (nota <= 10 && nota >= 9 ) ? `Seu conceito foi A`: (nota <= 8.9 && nota >= 8 ) ? `Seu conceito foi B`: (nota <= 7.9 && nota >= 7 ) ? `Seu conceito foi C`: (nota <= 6.9 && nota >= 6 ) ? `Seu conceito foi D`: `Seu conceito foi E`;
     //Saída
-
+    alert(mensagemFinal);
 </script>
